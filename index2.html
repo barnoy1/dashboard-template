@@ -117,74 +117,77 @@
                 </ol>
               </nav>
             </div>
-        <section class="pt-0">
-          <div class="container-fluid">
-            <div class="row gy-4">
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body"><strong>Pie Chart Example</strong>
-                    <canvas id="pieChartCustom1"></canvas>
+            
+        
+            <section class="pt-0">
+              <div class="container-fluid">
+                <div class="row gy-4">
+                  <div class="col-lg-5">
+                    <div class="card">
+                      <div class="card-body"><strong>Pie Chart Example</strong>
+                        <canvas id="pieChartCustom1"></canvas>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body"><strong>Pie Chart Example</strong>
-                    <canvas id="doughnutChartCustom1"></canvas>
+                  <div class="col-lg-5">
+                    <div class="card">
+                      <div class="card-body"><strong>Pie Chart Example</strong>
+                        <canvas id="doughnutChartCustom1"></canvas>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="card">
-                  <div class="card-body"><strong>Line Chart Example</strong>
-                    <canvas id="scatterChartCustom2"></canvas>
+                  <div class="col-lg-10">
+                    <div class="card">
+                      <div class="card-body"><strong>Line Chart Example 1</strong>
+                        <canvas id="scatterChartCustom2"></canvas>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="card mb-0">
-                  <div class="card-header">
-                    <h3 class="h4 mb-0">Striped table with hover effect</h3>
-                  </div>
-                  <div class="card-body pt-0">
-                    <div class="table-responsive">
-                      <table class="table mb-0 table-striped table-hover">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th class="border-bottom-0" scope="row">3</th>
-                            <td class="border-bottom-0">Larry</td>
-                            <td class="border-bottom-0">the Bird</td>
-                            <td class="border-bottom-0">@twitter</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                  <div class="col-lg-10">
+                    <div class="card mb-0">
+                      <div class="card-header">
+                        <h3 class="h4 mb-0">Striped table with hover effect</h3>
+                      </div>
+                      <div class="card-body pt-0">
+                        <div class="table-responsive">
+                          <table class="table mb-0 table-striped table-hover">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th class="border-bottom-0" scope="row">3</th>
+                                <td class="border-bottom-0">Larry</td>
+                                <td class="border-bottom-0">the Bird</td>
+                                <td class="border-bottom-0">@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
+            </section>
+
         <!-- Page Footer-->
         <footer class="position-absolute bottom-0 bg-dash-dark-2 text-white text-center py-3 w-100 text-xs" id="footer">
           <div class="container-fluid text-center">
@@ -203,8 +206,10 @@
     <script src="vendor/luxon/chartjs-adapter-luxon.min.js"></script>
     <script src="js/charts-custom.js"></script>
     <script src="js/front.js"></script>
+    <script src="vendor/chart.js-4.4.3/plugins/chartjs-plugin-datalabels@2.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script> -->
     
-    
+
     
   </body>
 </html>

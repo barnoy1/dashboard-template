@@ -186,14 +186,33 @@ document.addEventListener("DOMContentLoaded", function () {
     // ------------------------------------------------------- //
     // Pie Chart Custom 1
     // ------------------------------------------------------ //
+    // Chart.register(ChartDataLabels);
     var pieChartExample = new Chart(PIECHARTEXMPLE, {
         type: "pie",
         options: {
             plugins: {
+                datalabels: {
+                    formatter: (value, ctx) => {
+                        let sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                        let percentage = (value * 100 / sum).toFixed(2) + "%";
+                        return percentage;
+                    },
+                    color: '#fff',
+                    font: {
+                        weight: 'bold',
+                        size: 16
+                    }
+                },
                 legend: {
                     display: true,
-                    position: "left"
-                }
+                    position: "right",
+                    align: "center",
+                    labels: {
+                        usePointStyle: true,
+                        pointStyle: 'circle',
+                        padding: 25
+                    }
+                },
             }
         },
         data: {
@@ -204,7 +223,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 backgroundColor: ["#723ac3", "#864DD9", "#9762e6", "#a678eb"],
                 hoverBackgroundColor: ["#723ac3", "#864DD9", "#9762e6", "#a678eb"]
             }]
-        }
+        },
+        plugins: [ChartDataLabels]
     });
 
     // ------------------------------------------------------- //
@@ -213,11 +233,29 @@ document.addEventListener("DOMContentLoaded", function () {
     var myPieChart = new Chart(PIECHART, {
         type: "doughnut",
         options: {
-            cutout: '80%',
+            cutout: '30%',
             plugins: {
                 legend: {
                     display: true,
-                    position: "left"
+                    position: "right",
+                    align: "center",
+                    labels: {
+                        usePointStyle: true,
+                        pointStyle: 'circle',
+                        padding: 25
+                    }
+                },
+                datalabels: {
+                    formatter: (value, ctx) => {
+                        let sum = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                        let percentage = (value * 100 / sum).toFixed(2) + "%";
+                        return percentage;
+                    },
+                    color: '#fff',
+                    font: {
+                        weight: 'bold',
+                        size: 16
+                    }
                 }
             }
         },
@@ -229,6 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 backgroundColor: ["#b53dde", "#CF53F9", "#d06cf2", "#de97f6"],
                 hoverBackgroundColor: ["#b53dde", "#CF53F9", "#d06cf2", "#de97f6"]
             }]
-        }
-    });
+        },
+        plugins: [ChartDataLabels]
+    });    
 });
